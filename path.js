@@ -25,4 +25,12 @@ exports.Path = class Path
 
     return path;
   }
+
+  /**
+   * Get the file name of a path.
+   * @param {string} filePath File path to get the name from.
+   */
+  static filename(filePath) {
+    return Path.correct(filePath).split("/").pop();
+  }
 }
